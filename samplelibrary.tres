@@ -1,0 +1,83 @@
+[gd_resource type="SampleLibrary" load_steps=12 format=1]
+
+[ext_resource path="res://sounds/explosion_1.wav" type="Sample" id=1]
+[ext_resource path="res://sounds/explosion_2.wav" type="Sample" id=2]
+[ext_resource path="res://sounds/explosion_3.wav" type="Sample" id=3]
+[ext_resource path="res://sounds/explosion_4.wav" type="Sample" id=4]
+[ext_resource path="res://sounds/explosion_5.wav" type="Sample" id=5]
+[ext_resource path="res://sounds/level_up.wav" type="Sample" id=6]
+[ext_resource path="res://sounds/loose_3.wav" type="Sample" id=7]
+[ext_resource path="res://sounds/loose_1.wav" type="Sample" id=8]
+[ext_resource path="res://sounds/loose_2.wav" type="Sample" id=9]
+[ext_resource path="res://sounds/loose_4.wav" type="Sample" id=10]
+[ext_resource path="res://sounds/missile_launch.wav" type="Sample" id=11]
+
+[resource]
+
+samples/explosion_1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 1 )
+}
+samples/explosion_2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 2 )
+}
+samples/explosion_3 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 3 )
+}
+samples/explosion_4 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 4 )
+}
+samples/explosion_5 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 5 )
+}
+samples/level_up = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 6 )
+}
+samples/loose3 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 7 )
+}
+samples/loose_1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 8 )
+}
+samples/loose_2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 9 )
+}
+samples/loose_4 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 10 )
+}
+samples/missile_launch = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 11 )
+}
+
