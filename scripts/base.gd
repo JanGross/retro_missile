@@ -22,6 +22,7 @@ func _process(delta):
 	
 	
 func _input(event):
+	print(event.type)
 	if state.has_method("input"):
 		state.input(event)
 
