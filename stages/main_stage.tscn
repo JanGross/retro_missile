@@ -82,6 +82,7 @@ tracks/0/keys = {
 script/source = "extends TextureButton
 
 func _ready():
+	set_process_input(true)
 	if not game_manager.state == game_manager.STATE_STARTUP: on_button_clicked()
 	connect(\"button_down\", self, \"on_button_clicked\")
 	var anim_player = get_node(\"AnimationPlayer\")
@@ -91,9 +92,12 @@ func _ready():
 func anim_finished():
 	print(\"SETTING QTIME SACALE\")
 	OS.set_time_scale(0)
+
+func on_button_clicked():
+	pass
 	
 func _input(event):
-	if(event.is_action_pressed(\"Coin\")):
+	if event.is_action(\"Coin\") or event.is_action(\"Coin2\"):
 		OS.set_time_scale(1)
 		hide()
 "
@@ -103,6 +107,7 @@ func _input(event):
 [node name="Base" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 211, 240 )
+rotation_speed_mult = 1
 
 [node name="Background" type="CanvasLayer" parent="."]
 

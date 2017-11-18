@@ -16,6 +16,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 script/script = ExtResource( 1 )
+rotation_speed_mult = 1
 health = 100
 reload_time = 0.8
 

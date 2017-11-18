@@ -6,6 +6,7 @@ var missile_scn = preload("res://scenes/missile.tscn")
 var states = {"STATE_AIMING": StateAiming, "STATE_FIRING": StateFiring}
 var cannon_rotation = 90
 var cannon_rot_dir = 0
+export var rotation_speed_mult = 1
 export var health = 100
 export var reload_time = 0.8
 
@@ -14,6 +15,7 @@ signal state_change
 func _ready():
 	set_state("STATE_AIMING")
 	set_process_input(true)
+	set_fixed_process(true)
 	set_process(true)
 	local_health = health
 
@@ -21,11 +23,11 @@ func _process(delta):
 	state.update(delta)
 	
 func _fixed_process(delta):
-	if state.has_method("fixed_update"):
+	if state.has_method("fixed_process"):
 		state.fixed_process(delta)
 	
 func _input(event):
-	print(event.type)
+	print(cannon_rot_dir)
 	if state.has_method("input"):
 		state.input(event)
 
@@ -105,9 +107,9 @@ class StateAiming:
 			print("We fire")
 			base.set_state("STATE_FIRING")
 		if event.is_action("ui_left") or event.is_action("J_left"):
-			base.cannon_rot_dir = 1 
+			base.cannon_rot_dir = 1 * base.rotation_speed_mult
 		if event.is_action("ui_right") or event.is_action("J_right"):
-			base.cannon_rot_dir = -1
+			base.cannon_rot_dir = -1 * base.rotation_speed_mult
 		if event.is_action_released("ui_right") or event.is_action_released("ui_left") or event.is_action_released("J_right") or event.is_action_released("J_left"):
 			base.cannon_rot_dir = 0
 		
