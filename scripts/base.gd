@@ -20,6 +20,9 @@ func _ready():
 func _process(delta):
 	state.update(delta)
 	
+func _fixed_process(delta):
+	if state.has_method("fixed_update"):
+		state.fixed_process(delta)
 	
 func _input(event):
 	print(event.type)
@@ -90,6 +93,8 @@ class StateAiming:
 		#var mouse_pos = base.get_global_mouse_pos()
 		#cannon.look_at(mouse_pos)
 		#cannon.set_rot(cannon.get_global_pos().angle_to_point(mouse_pos))
+	
+	func fixed_process(delta):
 		base.cannon_rotation += base.cannon_rot_dir
 		cannon.set_rot(deg2rad(base.cannon_rotation))
 	

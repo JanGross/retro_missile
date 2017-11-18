@@ -92,9 +92,10 @@ func anim_finished():
 	print(\"SETTING QTIME SACALE\")
 	OS.set_time_scale(0)
 	
-func on_button_clicked():
-	OS.set_time_scale(1)
-	hide()
+func _input(event):
+	if(event.is_action_pressed(\"Coin\")):
+		OS.set_time_scale(1)
+		hide()
 "
 
 [node name="Node" type="Node"]
