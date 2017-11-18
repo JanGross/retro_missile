@@ -46,11 +46,18 @@ func update_value(val):
 [sub_resource type="GDScript" id=4]
 
 script/source = "extends TextureButton
+
 func _ready():
-	connect(\"button_down\", self, \"restart\")
+	set_process_input(true)
+	
 	game_manager.update_ui()
 	connect(\"visibility_changed\", self, \"on_visibility_changed\")
 
+func _input(event):
+	if is_visible():
+		if event.is_action_pressed(\"Coin\") or event.is_action_pressed(\"Coin2\"):
+			restart()
+	
 func on_visibility_changed():
 	randomize()
 	print(\"WE ARE NOW VISIBLE? %s\" % is_visible())

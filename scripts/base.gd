@@ -101,7 +101,7 @@ class StateAiming:
 		cannon.set_rot(deg2rad(base.cannon_rotation))
 	
 	func input(event):
-		if event.is_action_pressed("slow_motion"):
+		if event.is_action_pressed("slow_motion") or event.is_action_pressed("X"):
 			OS.set_time_scale(0.15)
 		if event.is_action_released("fire") or event.is_action_released("A") and reload_timer <= 0:
 			print("We fire")
