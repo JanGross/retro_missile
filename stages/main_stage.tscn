@@ -107,7 +107,6 @@ func _input(event):
 [node name="Base" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 211, 240 )
-rotation_speed_mult = 1
 
 [node name="Background" type="CanvasLayer" parent="."]
 

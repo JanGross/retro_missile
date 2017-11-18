@@ -64,7 +64,7 @@ collision/mask = 1024
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 speed_min = 5
-speed_max = 45
+speed_max = 20
 
 [node name="Sprite" type="Sprite" parent="."]
 
@@ -76,7 +76,7 @@ texture = ExtResource( 2 )
 transform/pos = Vector2( -0.649553, -0.311569 )
 transform/rot = -180.0
 z/z = -1
-config/amount = 64
+config/amount = 32
 config/lifetime = 1.0
 config/process_mode = 1
 config/half_extents = Vector2( 5, 2 )
@@ -104,7 +104,7 @@ color/color_ramp = ExtResource( 3 )
 transform/pos = Vector2( 0.892595, 5.7285 )
 transform/rot = -180.0
 z/z = 1
-config/amount = 32
+config/amount = 16
 config/lifetime = 0.4
 config/process_mode = 1
 config/half_extents = Vector2( 5, 2 )

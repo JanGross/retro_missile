@@ -1,13 +1,14 @@
 [gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://scripts/base.gd" type="Script" id=1]
-[ext_resource path="res://sprites/base.png" type="Texture" id=2]
-[ext_resource path="res://sprites/cannon.png" type="Texture" id=3]
-[ext_resource path="res://scripts/ray.gd" type="Script" id=4]
+[ext_resource path="res://sprites/cannon_02.png" type="Texture" id=2]
+[ext_resource path="res://scripts/ray.gd" type="Script" id=3]
+[ext_resource path="res://sprites/base_02.png" type="Texture" id=4]
 
 [node name="Base" type="StaticBody2D"]
 
 transform/pos = Vector2( 216.299, 209.498 )
+transform/scale = Vector2( 2.05199, 2.05199 )
 input/pickable = false
 collision/layers = 1
 collision/mask = 1
@@ -20,26 +21,30 @@ rotation_speed_mult = 1
 health = 100
 reload_time = 0.8
 
-[node name="BaseSprite" type="Sprite" parent="."]
-
-transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 2 )
-
 [node name="CannonSprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( -0.0346317, -7.63508 )
-transform/scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 3 )
-offset = Vector2( 0.0179825, -27.3786 )
+transform/pos = Vector2( 1.80362, -4.62868 )
+transform/scale = Vector2( 0.80479, 0.80479 )
+texture = ExtResource( 2 )
+offset = Vector2( -0.404516, -2.7748 )
+flip_v = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CannonTip" type="Position2D" parent="CannonSprite"]
 
-transform/pos = Vector2( 0, -56.1053 )
+transform/pos = Vector2( 0.240097, -12.7907 )
 
 [node name="Ray" type="Node2D" parent="CannonSprite"]
 
 z/z = -1
-script/script = ExtResource( 4 )
+script/script = ExtResource( 3 )
+
+[node name="BaseSprite" type="Sprite" parent="."]
+
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 4 )
 
 [node name="SoundRoomParams" type="SoundRoomParams" parent="."]
 
